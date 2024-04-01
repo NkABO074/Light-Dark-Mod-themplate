@@ -193,7 +193,7 @@ p {
 }
 
 /* Dark Mode Toggle */
-.theme-switch-wrapper {
+.theme_switch_wrapper {
   display: flex;
   align-items: center;
   z-index: 100;
@@ -202,26 +202,26 @@ p {
   top: 30px;
 }
 
-.theme-switch-wrapper span {
+.theme_switch_wrapper span {
   margin-right: 10px;
   font-size: 1rem;
 }
 
-.toggle-text {
+.toggle_text {
   position: relative;
   top: -4px;
   right: 5px;
   color: var(--on-background);
 }
 
-.theme-switch {
+.theme_switch {
   display: inline-block;
   height: 34px;
   position: relative;
   width: 60px;
 }
 
-.theme-switch input {
+.theme_switch input {
   display: none;
 }
 
@@ -263,7 +263,7 @@ input:checked + .slider::before {
   border-radius: 50%;
 }
 
-.fas {
+.fa-solid {
   font-size: 30px;
   margin-right: 5px;
 }
