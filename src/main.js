@@ -75,12 +75,24 @@ function webSiteMode(is_dark) {
 function switchTheme(event) {
   if (event.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
     webSiteMode(true);
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "ligth");
     webSiteMode(false);
   }
 }
 
 // Event listener
 TOGGLE_SWITCH.addEventListener("change", switchTheme);
+
+// check local storage for theme and set it
+const CURRENT_THEME = localStorage.getItem('theme');
+if (CURRENT_THEME) {
+  document.documentElement.setAttribute("data-theme", CURRENT_THEME);
+ if (CURRENT_THEME === 'dark') {
+  TOGGLE_SWITCH.checked = true;
+  webSiteMode(true);
+ }
+}
